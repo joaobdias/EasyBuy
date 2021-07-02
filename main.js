@@ -74,7 +74,7 @@ function backTop() {
 }
 
 // Change Menu Active
-/*const sections = document.querySelectorAll('section[id]')
+const sections = document.querySelectorAll('main section[id]')
 function menuCurrentSection() {
   const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
   for (const section of sections) {
@@ -86,20 +86,20 @@ function menuCurrentSection() {
     const checkpointEnd = checkpoint <= sectionTop + sectionHeight
 
     if (checkpointStart && checkpointEnd) {
-      documento
-        .querySelector('nav ul li a[href]*=' + sectionId + ']')
+      document
+        .querySelector('nav ul li a[href*=' + sectionId + ']')
         .classList.add('active')
     } else {
-      documento
-        .querySelector('nav ul li a[href]*=' + sectionId + ']')
+      document
+        .querySelector('nav ul li a[href*=' + sectionId + ']')
         .classList.remove('active')
     }
   }
-}*/
+}
 
 /*Functions*/
 window.addEventListener('scroll', function () {
   scrollHeader()
   backTop()
-  //  menuCurrentSection()
+  menuCurrentSection()
 })
